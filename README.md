@@ -22,6 +22,25 @@ L’obiettivo è valutare la capacità di lavorare con:
 - validazione input  
 
 ---
+## 🧠 Valutazione & Feedback
+
+Questa challenge non serve a “passare un test” o a fare tutto perfetto.
+
+È pensata per capire come affronti un task frontend reale.
+
+Dopo la submission riceverai un feedback strutturato basato su:
+
+- **Gestione API** – fetch dei dati, error handling, edge cases  
+- **State management** – chiarezza, scalabilità e correttezza  
+- **Form & validazione** – usabilità e robustezza  
+- **Qualità del codice** – leggibilità, struttura e manutenibilità  
+- **Scelte UX** – loading states, gestione errori e flusso utente  
+
+Non è necessario completare tutto perfettamente per ottenere valore.
+
+Anche soluzioni parziali sono utili e verranno comunque valutate.
+
+---
 
 ## ⚙️ Stack
 
