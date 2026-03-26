@@ -12,15 +12,28 @@ fetch("https://jsonplaceholder.typicode.com/posts")
     renderPosts(posts);
   });
 
-  
+
+
+  //render e ciclo dei primi 5 post in home
 function renderPosts(posts) {
   postsContainer.innerHTML = "";
 
+
+
+  //  aggiunta dinamica delle card per ogni post. 
   posts.slice(0, 5).forEach(post => {
     postsContainer.innerHTML += `
-      <h3>${post.title}</h3>
-      <p>${post.body}</p>
-      <hr/>
+      <div class="col-md-4">
+
+      <div class="card mb-5 mt-5 w-100">
+        <img src="https://picsum.photos/300/200" class="card-img-top w-100">
+        <div class="card-body">
+          <h5 class="card-title">${post.title}</h5>
+          <p class="card-text">${post.body}</p>
+        </div>
+      </div>
+
+      </div>
     `;
   });
 }
