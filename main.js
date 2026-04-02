@@ -2,7 +2,9 @@ const postsContainer = document.getElementById('posts');
 
 let posts = [];
 
+//challenge 4:caricamento
 
+postsContainer.innerHTML = "Caricamento...";
 
 //fetch dei dati dall'API,trasformazione in json e renderizzazione dei primi 5 post nella pagina
 fetch("https://jsonplaceholder.typicode.com/posts")
@@ -10,7 +12,17 @@ fetch("https://jsonplaceholder.typicode.com/posts")
   .then(data => {
     posts = data;
     renderPosts(posts);
+  })
+
+  //challenge 4: gestione errori, nel caso in cui la chiamata all'API non vada a buon fine. 
+  
+  .catch(error => {
+    postsContainer.innerHTML = "Errore nel caricamento dei post";
+    console.error(error);
   });
+
+
+  
 
 
 
@@ -51,7 +63,13 @@ form.addEventListener('submit', function(e) {
 
    const title = document.getElementById('title').value;
    const body = document.getElementById('body').value;
-  console.log(title,body);
+  // console.log(title,body);
+
+  //gestione input vuoti, con alert
+  if (!title || !body) {
+  alert("Compila tutti i campi");
+  return;
+}
 
   // creazione di un nuovo post con i dati inseriti nel form
   const newPost = {
@@ -65,4 +83,18 @@ form.addEventListener('submit', function(e) {
 
   // renderizzazione dei post aggiornati
   renderPosts(posts);
+});
+
+
+// logica di ricerca dei post
+const searchInput = document.getElementById('search');
+
+  searchInput.addEventListener('input', function() {
+      const value = searchInput.value.toLowerCase();
+
+      const filteredPosts = posts.filter(post =>
+        post.title.toLowerCase().includes(value)
+      );
+
+    renderPosts(filteredPosts);
 });

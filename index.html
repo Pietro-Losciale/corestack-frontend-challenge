@@ -45,10 +45,14 @@
           <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </li>
       </ul>
+
+      <!-- form di ricerca -->
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input id ="search" class="form-control me-2" type="search" placeholder="Cerca..." aria-label="Search"/>
+        <button class="btn btn-outline-black" type="submit"> <i class="fas fa-search"></i> </button>
       </form>
+
+
     </div>
   </div>
 </nav>
@@ -62,22 +66,9 @@
 
       <form id="postForm" class="d-flex flex-column gap-3">
 
-          <input 
-            id="title" 
-            class="form-control" 
-            placeholder="Titolo"
-          >
-
-          <textarea 
-            id="body" 
-            class="form-control" 
-            placeholder="Descrizione"
-          ></textarea>
-
-          <button 
-            class="btn btn-primary" 
-            type="submit"
-          >
+          <input  id="title" class="form-control" placeholder="Titolo">
+          <textarea id="body" class="form-control" placeholder="Descrizione"></textarea>
+          <button class="btn btn-custom" type="submit">
             Pubblica post
           </button>
 
@@ -111,5 +102,8 @@
 
 
 <script src="main.js"></script>
+
+
+<script src="https://kit.fontawesome.com/928f34efb2.js" crossorigin="anonymous"></script>
 </body>
 </html>

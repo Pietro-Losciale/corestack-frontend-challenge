@@ -1,5 +1,19 @@
 # CoreStack – Frontend Challenge v2
 
+## Mio README
+
+1-**Gestione dello stato**
+I dati vengono salvati tramite js, nella variabile posts. 
+Vengono aggiornati tramite la fetch per recuperare informazioni dall'API, e renderizzati. 
+
+
+2-**strutturazione componenti**
+Non essendo in un framework, ogni elemento html e' presente nel nostro index.html. Delle card di boostrap vengono ciclate con un forEach. Ho simulato una richiesta di tipo POST per permettere all'utente di pubblicare un nuovo contenuto, tramite un eventListener che salva gli input di un form in delle costanti, e renderizza il post in homepage.
+
+
+ 3-**Scelte e compromessi**
+  Ho utilizzato vanilla JS ed HTML per cogliere l'occasione di uscire dalla mia comfort zone, ripassando i fondamenti di javascript senza alcun framework che uso solitamente per realizzare progetti (Laravel, che usa la logica MVC).
+
 ## ⚠️ Aggiornamento
 
 Questa è la versione aggiornata della challenge (v2).
