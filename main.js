@@ -37,3 +37,32 @@ function renderPosts(posts) {
     `;
   });
 }
+
+
+// logica di aggiunta di nuovi post
+
+const form = document.getElementById('postForm');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+
+  // costanti per salvare i dati inseriti nel form, catturati da getElementById//
+
+   const title = document.getElementById('title').value;
+   const body = document.getElementById('body').value;
+  console.log(title,body);
+
+  // creazione di un nuovo post con i dati inseriti nel form
+  const newPost = {
+    id: Date.now(),
+    title: title,
+    body: body
+  };
+
+  // aggiunta del nuovo post IN CIMA alla lista dei post
+  posts.unshift(newPost);
+
+  // renderizzazione dei post aggiornati
+  renderPosts(posts);
+});
